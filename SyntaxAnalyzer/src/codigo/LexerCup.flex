@@ -1,10 +1,4 @@
-# Syntax_analyzer
-1. Ejercicio. Crear un analizador Sintáctico (Cualquier tipo, LL, LR o sin usar estos métodos) en el Lenguaje de programación de su preferencia.
-  * Netbeans 8.2
-  * Java JDK 8 2.
-2. Documentar Lenguaje utilizado del analizador Léxico para realizar pruebas.
-  ```java
-  package codigo;
+package codigo;
 import java_cup.runtime.Symbol;
 %% /*Declaraciones que vamos a utilizar*/
 %class LexerCup
@@ -120,9 +114,4 @@ espacio=[ ,\t,\r,\n]+ /*Los espacios que ignorara el analizador lexico*/
 ("(-"{D}+")")|{D}+ {return new Symbol(sym.Numero, yychar, yyline, yytext());}
 
 /* Error de analisis */
-. {return new Symbol(sym.ERROR, yychar, yyline, yytext());}
-```
-
-4.Imagen de portada.
-
-![Imagen Previsualizacion](imageSyntaxAnalyzer.png)
+ . {return new Symbol(sym.ERROR, yychar, yyline, yytext());}
